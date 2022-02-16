@@ -3,20 +3,40 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <nav>
-      <h1>
-      </h1>
-      <section>  
-        <button>
-        <button>
+  <body class="body" background="./assets/burger-friends.jpg" alt="Burgers with friends">
+    <nav class="nav">
+      <section class="title">
+        <h1 class="title-header">What's for Dinner?</h1>
+      </section>
+      <section class="add-recipe">
+        <button class="add-recipe-button">ADD A RECIPE</button>
       </section>
     </nav>
-    <section class='main'>
-      <section>
-      <img>
-      <img>
-      </section>
+    <section class="main">
+      <section class="left-box">
+        <section class="form-header">
+          <h2 class="looking-for-header">What are you looking for?*</h2>
+        </section>
+        <form class='radio-buttons'>
+          <label>
+           <input type="radio" id="Side" name="message-type"> Side
+         </label>
+          <label>
+			     <input type="radio" id="Main-Dish"name="message-type"> Main Dish
+         </label>
+			    <label>
+           <input type="radio" id="Dessert"name="message-type"> Dessert
+         </label>
+          <label>
+           <input type="radio" id="Entire-Meal"name="message-type"> Entire Meal
+         </label>
+        </form>
+        <section class="lets-cook">
+          <button class="lets-cook-button">Lets Cook</button>
+        </section>
+    </section>
+    <section class="right-box">
+    </section>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
