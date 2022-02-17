@@ -7,9 +7,9 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-/* * {
+* {
   border: 2px solid blue;
-} */
+}
 
 .body {
   margin: 0;
@@ -36,7 +36,6 @@ red - #ee5253
   height: 50px;
   font-family: 'Roboto', sans-serif;
   font-size: 15pt;
-  font-weight: bolder;
 }
 
 .nav {
@@ -52,12 +51,14 @@ red - #ee5253
   align-items: center;
   margin: 10px;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   background-color: rgba(225, 225, 225, .9);
   border: none;
   border-radius: 8px;
   padding-right: 10px;
   margin-right: 20px;
+  width: 180px;
+  height: 30px
 }
 
 .add-recipe-button:hover {
@@ -95,10 +96,10 @@ red - #ee5253
 }
 
 .right-box {
-  box-sizing: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  flex-direction: column;
   opacity: 90%;
   background: rgba(225, 225, 225, .9);
   height: 450px;
@@ -135,8 +136,15 @@ span {
   font-family: 'Roboto', sans-serif;
   font-size: 20pt;
 }
-input[type='radio'] {
+label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+input {
      transform: scale(1.5);
+     margin: 15px;
+
  }
 .lets-cook {
   display: flex;
@@ -193,7 +201,7 @@ input[type='radio'] {
 .list-meal {
   display: flex;
   width: 500px;
-  height: 300px;
+  height: 450px;
   justify-content: center;
   align-items: flex-start;
   font-family: 'Roboto', sans-serif;
@@ -201,6 +209,33 @@ input[type='radio'] {
   margin: -8px;
   padding-bottom: 50px;
   text-align: center;
+}
+
+.clear{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 500px;
+  height: 75px;
+}
+
+.clear-button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18pt;
+  color: white;
+  background-color: #95a5a6;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  margin: 10px;
+  height: 35px;
+}
+.clear-button:hover {
+  background-color: #4CAF50;
+  color: white;
+  border:1px solid #f9f68a;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
 }
 
 .hidden {
