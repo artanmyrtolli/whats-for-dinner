@@ -19,18 +19,24 @@ letsCook.addEventListener('click', printMeal)
 function logSide(){
   buildMeal.side = sides[randomIndex(sides)];
   mealOutput.innerText = buildMeal.side;
-  shouldMake.classList.remove('hidden');
-  mealOutput.classList.remove('hidden');
+
 }
 function logMainDish(){
   buildMeal.main = mains[randomIndex(mains)]
-  console.log(buildMeal);
+  mealOutput.innerText = buildMeal.main;
+
 }
 function logDessert(){
  buildMeal.dessert = desserts[randomIndex(desserts)];
-  console.log(buildMeal);
+  mealOutput.innerText = buildMeal.dessert;
+
 }
 function logEntireMeal(){
+  buildMeal.side = sides[randomIndex(sides)];
+  buildMeal.main = mains[randomIndex(mains)];
+  buildMeal.dessert = desserts[randomIndex(desserts)];
+  mealOutput.innerText = `${buildMeal.side}, ${buildMeal.main}, ${buildMeal.dessert}.`
+
 }
 function printMeal (){
   cookpot.classList.add('hidden');
