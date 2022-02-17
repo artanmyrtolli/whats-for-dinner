@@ -4,7 +4,9 @@ var inputMainDish = document.querySelector('#Main-Dish');
 var inputDessert = document.querySelector('#Dessert');
 var inputEntireMeal = document.querySelector('#Entire-Meal');
 var letsCook = document.querySelector('.lets-cook-button');
-
+var cookpot = document.querySelector('.cook-pot')
+var shouldMake = document.querySelector('.should-make')
+var mealOutput = document.querySelector('.list-meal')
 var buildMeal = {};
 
 inputSide.addEventListener('click', logSide);
@@ -13,9 +15,12 @@ inputDessert.addEventListener('click', logDessert);
 inputEntireMeal.addEventListener('click', logEntireMeal);
 letsCook.addEventListener('click', printMeal)
 
+
 function logSide(){
   buildMeal.side = sides[randomIndex(sides)];
-    console.log(buildMeal);
+  mealOutput.innerText = buildMeal.side;
+  shouldMake.classList.remove('hidden');
+  mealOutput.classList.remove('hidden');
 }
 function logMainDish(){
   buildMeal.main = mains[randomIndex(mains)]
@@ -27,8 +32,15 @@ function logDessert(){
 }
 function logEntireMeal(){
 }
-
 function printMeal (){
+  cookpot.classList.add('hidden');
+  shouldMake.classList.remove('hidden');
+  mealOutput.classList.remove('hidden');
+
+
+  function printDessert(){
+    console.log(desserts[randomIndex(desserts)])
+  }
 }
 
 
