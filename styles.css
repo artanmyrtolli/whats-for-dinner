@@ -9,7 +9,7 @@ red - #ee5253
 */
 /* * {
   border: 2px solid blue;
-} */
+}  */
 
 .body {
   margin: 0;
@@ -174,5 +174,5 @@ input[type='radio'] {
   height: 300px;
 }
 .cook-pot {
-  width: 150px;;
+  width: 180px;
 }
