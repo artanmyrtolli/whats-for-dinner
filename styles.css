@@ -7,9 +7,9 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-* {
+/* * {
   border: 2px solid blue;
-}
+} */
 
 .body {
   margin: 0;
@@ -47,6 +47,9 @@ red - #ee5253
 }
 
 .add-recipe-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   margin: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
@@ -54,7 +57,7 @@ red - #ee5253
   border: none;
   border-radius: 8px;
   padding-right: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .add-recipe-button:hover {
@@ -62,6 +65,7 @@ red - #ee5253
   color: white;
   border:1px solid #f9f68a;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
 }
 
 .add-recipe {
@@ -93,7 +97,8 @@ red - #ee5253
 .right-box {
   box-sizing: relative;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   opacity: 90%;
   background: rgba(225, 225, 225, .9);
   height: 450px;
@@ -111,8 +116,11 @@ red - #ee5253
 .looking-for-header {
   font-family:'Roboto', sans-serif;
   font-size: 24pt;
-  margin-left: -50px;
-  margin-bottom: -50px;
+  margin-left: 30px;
+  margin-bottom: -40px;
+}
+span {
+  color: #ee5253;
 }
 
 .radio-buttons{
@@ -121,24 +129,50 @@ red - #ee5253
   align-items: flex-start;
   justify-content: center;
   width: 300px;
-  height: 200px;
+  height: 300px;
   margin-left: 100px;
   justify-content: space-around;
   font-family: 'Roboto', sans-serif;
   font-size: 20pt;
 }
+input[type='radio'] {
+     transform: scale(1.5);
+ }
 .lets-cook {
   display: flex;
-  justify-content: center;
-  height: 200px;
+  justify-content: flex-start;
+  height: 70px;
+  margin-bottom: 40px;
+  margin-top: -30px;
 }
-.lets-cook-buttons {
-  margin: 10px;
+.lets-cook-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  margin-left: 80px;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  background-color: rgba(225, 225, 225, .9);
-  border: none;
+  background-color: #0fb9b1;
   border-radius: 8px;
-  padding-right: 10px;
-  margin-right: 10px;
+  width: 220px;
+  height: 40px;
+  border: none;
+}
+.lets-cook-button:hover {
+  background-color: #4CAF50;
+  color: white;
+  border:1px solid #f9f68a;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+}
+.output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+}
+.cook-pot {
+  width: 150px;;
 }
