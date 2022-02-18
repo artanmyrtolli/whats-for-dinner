@@ -42,24 +42,32 @@ function logMeal(){
 }
 
 function printMeal (){
-    for(var i = 0 ;i < inputs.length; i++){
-      inputs[i].checked = false;
-      hideCookpot();
+  letsCook.innerText = `Let's cook!`
+   var inputCounter = 0;
+    for(var i = 0; i < inputs.length; i++){
+        if (inputs[i].checked === false)
+        inputCounter++;
     }
+       if (inputCounter === 4) {
+          letsCook.innerText = 'Please choose one!'
+          return;
+      }
+      inputs.checked = false;
+      hideCookpot();
 }
 
 function hideCookpot() {
   cookpot.classList.add('hidden');
   shouldMake.classList.remove('hidden');
   mealOutput.classList.remove('hidden');
-  clearButton.classList.remove('hidden')
+  clearButton.classList.remove('hidden');
 }
 
 function showCookpot(){
   cookpot.classList.remove('hidden');
   shouldMake.classList.add('hidden');
   mealOutput.classList.add('hidden');
-  clearButton.classList.add('hidden')
+  clearButton.classList.add('hidden');
 }
 
 
