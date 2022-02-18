@@ -42,7 +42,7 @@ function logMeal(){
 }
 
 function printMeal (){
-  letsCook.innerText = `Let's cook!`
+    resetLetsCookButton()
    var inputCounter = 0;
     for(var i = 0; i < inputs.length; i++){
         if (inputs[i].checked === false)
@@ -50,9 +50,10 @@ function printMeal (){
     }
        if (inputCounter === 4) {
           letsCook.innerText = 'Please choose one!'
+          letsCook.style.backgroundColor = 'red';
           return;
       }
-      inputs.checked = false;
+      // input[name="meal-type"]:checked
       hideCookpot();
 }
 
@@ -70,6 +71,10 @@ function showCookpot(){
   clearButton.classList.add('hidden');
 }
 
+function resetLetsCookButton() {
+  letsCook.innerText = `Let's cook!`
+  letsCook.style.backgroundColor = '#0fb9b1';
+}
 
 
 function randomIndex(array){
