@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body class="body" background="./assets/burger-friends.jpg" alt="Burgers with friends">
-    <nav class="nav">
+    <nav class="nav-top">
       <section class="title">
         <h1 class="title-header">What's for Dinner?</h1>
       </section>
@@ -46,6 +46,22 @@
     </section>
     </section>
   </body>
+  <section class="nav-bottom hidden">
+    <form class="new-recipe-form">
+      <h1 class="recipe-type">Recipe Type:</h1>
+      <select name="dropdown-meals" id="meals-dropdown">
+        <option value="choose" name="dropdown-meals">Choose One: *</option>
+        <option value="side" name="dropdown-meals">Side</option>
+        <option value="main" name="dropdown-meals">Main Dish</option>
+        <option value="dessert" name="dropdown-meals">Dessert</option>
+    </select>
+    </form>
+    <form class="new-recipe-form">
+      <h1 class="recipe-type">Recipe Name:</h1>
+      <input type="text" id="new-recipe-input" name="input-recipe">
+    </form>
+    <button class="add-new-button"type="button" >Add New</button>
+  </section>
   <script type="text/javascript" src="main.js"></script>
   <script type="text/javascript" src="foods-list.js"></script>
 </html>
