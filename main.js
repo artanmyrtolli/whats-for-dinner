@@ -49,8 +49,9 @@ function printMeal (){
     resetLetsCookButton();
    var inputCounter = 0;
     for(var i = 0; i < inputs.length; i++){
-        if (inputs[i].checked === false);
+        if (inputs[i].checked === false) {
         inputCounter++;
+       }
     }
        if (inputCounter === 4) {
           letsCook.innerText = 'Please choose one!'
