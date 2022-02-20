@@ -16,14 +16,14 @@ var clearButton = document.querySelector('.clear-button')
 var dropdown = document.getElementById("meals-dropdown");
 var addNew = document.querySelector('.add-new-button');
 var userNewRecipe = document.querySelector('#new-recipe-input');
+var xButton = document.querySelector('.x')
 var buildMeal = {};
 
 
 //prevent input from reloading page on 'Enter'
 userNewRecipe.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
-      event.preventDefault();
-    }
+      event.preventDefault(); }
 });
 
 loginButton.addEventListener('click', hideLogin)
@@ -35,6 +35,7 @@ letsCook.addEventListener('click', printMeal);
 clearButton.addEventListener('click', showCookpot);
 addRecipe.addEventListener('click', showUserRecipeForm);
 addNew.addEventListener('click', addNewMeal);
+xButton.addEventListener('click', hideUserRecipeForm)
 
 function logSide(){
   showCookpot();
@@ -58,13 +59,12 @@ function logMeal(){
   mealOutput.innerText = `${buildMeal.main} with a side of ${buildMeal.side} and ${buildMeal.dessert} for dessert!`
 }
 
-function printMeal (){
+function printMeal(){
     resetLetsCookButton();
    var inputCounter = 0;
     for(var i = 0; i < inputs.length; i++){
         if (inputs[i].checked === false) {
-        inputCounter++;
-       }
+        inputCounter++; }
     }
        if (inputCounter === 4) {
           letsCook.innerText = 'Please choose one!'
@@ -75,7 +75,7 @@ function printMeal (){
       hideCookpot();
 }
 
-function hideCookpot() {
+function hideCookpot(){
   cookpot.classList.add('hidden');
   shouldMake.classList.remove('hidden');
   mealOutput.classList.remove('hidden');
@@ -89,12 +89,12 @@ function showCookpot(){
   clearButton.classList.add('hidden');
 }
 
-function resetLetsCookButton() {
+function resetLetsCookButton(){
   letsCook.innerText = `Let's cook!`;
   letsCook.style.backgroundColor = '#0fb9b1';
 }
 
-function resetInputs () {
+function resetInputs(){
   for(var i = 0; i < inputs.length; i++){
     if (inputs[i].checked === true) inputs[i].checked = false;
     }
@@ -102,6 +102,10 @@ function resetInputs () {
 
 function showUserRecipeForm(){
   document.querySelector('.nav-bottom').classList.remove('hidden');
+}
+
+function hideUserRecipeForm(){
+  document.querySelector('.nav-bottom').classList.add('hidden');
 }
 
 function addNewMeal(){
@@ -113,16 +117,18 @@ function addNewMeal(){
   mealOutput.innerText = userNewRecipe.value;
   resetInputs();
   hideCookpot();
+  startTimer();
 }
 
 function hideLogin(){
   loginScreen.classList.add('hidden');
-  welcomeMsg.innerText += `Welcome ${userName.value}!`
+  welcomeMsg.innerText = `Welcome ${userName.value}!`
 }
-//
-// function preventDefault () {
-//   event.preventDefault();
-// }
+
+function startTimer(){
+  setTimeout(hideUserRecipeForm, 15000);
+}
+
 
 function randomIndex(array){
 return Math.floor(Math.random() * array.length);
