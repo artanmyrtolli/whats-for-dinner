@@ -1,3 +1,7 @@
+var loginScreen = document.querySelector('.login-screen');
+var loginButton = document.querySelector('.login-button')
+var userName = document.querySelector('#login-name-input');
+var welcomeMsg = document.querySelector('.welcome-message')
 var addRecipe = document.querySelector('.add-recipe-button');
 var inputSide = document.querySelector('#Side');
 var inputMainDish = document.querySelector('#Main-Dish');
@@ -14,6 +18,15 @@ var addNew = document.querySelector('.add-new-button');
 var userNewRecipe = document.querySelector('#new-recipe-input');
 var buildMeal = {};
 
+
+//prevent input from reloading page on 'Enter'
+userNewRecipe.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      event.preventDefault();
+    }
+});
+
+loginButton.addEventListener('click', hideLogin)
 inputSide.addEventListener('click', logSide);
 inputMainDish.addEventListener('click', logMain);
 inputDessert.addEventListener('click', logDessert);
@@ -101,6 +114,15 @@ function addNewMeal(){
   resetInputs();
   hideCookpot();
 }
+
+function hideLogin(){
+  loginScreen.classList.add('hidden');
+  welcomeMsg.innerText += `Welcome ${userName.value}!`
+}
+//
+// function preventDefault () {
+//   event.preventDefault();
+// }
 
 function randomIndex(array){
 return Math.floor(Math.random() * array.length);
